@@ -34,6 +34,6 @@ export class UsersService {
   }
 
   greetUser(): string {
-    return 'Hello, User! Welcome to the Users Service.';
+    return 'Hello, User! Welcome to the Users Service. ';
   }
 }
