@@ -11,3 +11,19 @@ services:
       MYSQL_PASSWORD: password
     ports:
       - '3306:3306'
+
+  my-nest-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: test
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
